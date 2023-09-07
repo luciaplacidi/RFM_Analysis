@@ -12,22 +12,25 @@ SELECT DISTINCT TERRITORY FROM [dbo].[sales_data_sample]
 -- Analysis
 
 -- Sales by Product Line
-SELECT PRODUCTLINE
-	   ,SUM(sales) AS revenue
+SELECT
+	PRODUCTLINE
+	,SUM(sales) AS revenue
 FROM [dbo].[sales_data_sample]
 GROUP BY PRODUCTLINE
 ORDER BY 2 DESC
 
 -- Sales by Year
-SELECT YEAR_ID
-	   ,SUM(sales) AS revenue
+SELECT
+	YEAR_ID
+	,SUM(sales) AS revenue
 FROM [dbo].[sales_data_sample]
 GROUP BY YEAR_ID
 ORDER BY 2 DESC
 
 -- Sales by Deal Size
-SELECT  DEALSIZE
-		,SUM(sales) Revenue
+SELECT 
+	DEALSIZE
+	,SUM(sales) Revenue
 FROM [dbo].[sales_data_sample]
 GROUP BY  DEALSIZE
 ORDER BY 2 DESC
